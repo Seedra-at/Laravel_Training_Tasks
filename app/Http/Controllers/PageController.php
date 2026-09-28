@@ -8,6 +8,12 @@ class PageController extends Controller
 {
     public function about()
     {
-        return view('about');
+      $products=[
+      ['laptop','HP','500'],
+      ['iphone','Apple',900],
+      ['phone','Samsung','400']
+      ];
+
+      return view('about',['products'=>$products]);
     }
 }
